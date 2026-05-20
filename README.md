@@ -68,6 +68,22 @@ Claude Code will autoload the skill when its trigger conditions match
 git submodule add https://github.com/maweis1981/agents-md docs/agents-md
 ```
 
+> **Tip on stable URLs**: The `curl` commands above point at `main`.
+> For a reproducible setup, replace `main` with a tagged release
+> (e.g. `v0.1.0`) so your install pinning doesn't drift when this
+> repo evolves.
+
+### Option D — Enforce the rules in CI
+
+This repo also ships small `bash` lint scripts under
+[`scripts/`](./scripts/) that check Conventional Commits, branch
+naming, bilingual symmetry, and internal links. Copy them into your
+own project's `scripts/` and wire them into a workflow modeled on
+[`.github/workflows/lint.yml`](./.github/workflows/lint.yml). The
+companion [`templates/.commitlintrc.json`](./templates/.commitlintrc.json)
+configures `@commitlint/cli` with the same ruleset for projects that
+already run commitlint via Husky.
+
 ## The ten rules at a glance
 
 1. **AI may modify frequently — but must commit infrequently.**

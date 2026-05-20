@@ -66,6 +66,18 @@ frontmatter）会自动加载。
 git submodule add https://github.com/maweis1981/agents-md docs/agents-md
 ```
 
+> **URL 稳定性提示**：上面的 `curl` 指向 `main`。如果想要可复现的安装，
+> 把 `main` 换成 tag（例如 `v0.1.0`），免得本仓后续演化导致你的依赖漂移。
+
+### 方式 D —— 在 CI 里强制规则
+
+本仓 [`scripts/`](./scripts/) 下提供了小巧的 bash lint 脚本，
+检查 Conventional Commits、分支命名、中英对称、内部链接。
+拷到你项目的 `scripts/`，仿照
+[`.github/workflows/lint.yml`](./.github/workflows/lint.yml) 接到 CI 即可。
+配套的 [`templates/.commitlintrc.json`](./templates/.commitlintrc.json)
+让已经在用 Husky + `@commitlint/cli` 的项目可以一键启用相同规则集。
+
 ## 十条核心规则速览
 
 1. **AI 可以高频修改 —— 但必须低频提交。**

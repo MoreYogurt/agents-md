@@ -46,18 +46,34 @@ agent.
 
 ## Concrete signals to watch
 
-- **Semantic diff tooling** (AST-aware diffs, intent diffs). Once these
-  become as good as line diffs, "one PR = one feature" stops being a
-  social rule and becomes a structural one.
-- **AI-native IDE infrastructure** (Claude Code, Cursor, etc.) that
-  treats sessions, not files, as the source of truth.
-- **Scale-to-zero databases** (Neon, Turso, PlanetScale) replacing
-  always-on Postgres clusters as the default. This is already happening.
-- **Event-driven serverless runtimes** replacing always-on agent loops.
-  Background jobs become message-triggered, not while-loop-triggered.
-- **Policy-as-code branch protection**: rules expressed not as "must
-  pass these checks" but as "must satisfy this intent" — verifiable by
-  another agent.
+- **Semantic / AST diff tooling**. Tools like
+  [Difftastic](https://difftastic.wilfred.me.uk/) (structural diff
+  over tree-sitter) and `git diff --word-diff` for prose already exist;
+  the next step is an *intent diff* — "this PR adds a feature flag,
+  doesn't change auth, and refactors three components". Once intent
+  diffs are as cheap as line diffs, "one PR = one feature" stops
+  being a social rule and becomes a structural one.
+- **AI-native IDE infrastructure**. Claude Code, Cursor, Codex, Devin,
+  Windsurf, etc. are gradually treating *sessions* and *workflows*,
+  rather than files, as the source of truth. The `AGENTS.md` /
+  `CLAUDE.md` convention this spec leans on is itself an early
+  artifact of that shift.
+- **Scale-to-zero databases**. Neon, Turso, PlanetScale, and
+  Supabase's pooled+direct split are already production-grade. Always-on
+  Postgres clusters as a default for early-stage projects are on the
+  way out.
+- **Event-driven serverless runtimes**. Inngest, Trigger.dev, QStash,
+  Cloudflare Queues, etc. replace always-on agent loops with
+  message-triggered workers. The economics finally match AI's bursty
+  load profile.
+- **Policy-as-code branch protection**. GitHub Rulesets, OpenSSF
+  Scorecard, and per-repo GitOps policy engines hint at where this
+  goes: rules expressed not as "must pass these checks" but as "must
+  satisfy this intent" — verifiable by another agent.
+
+None of these are speculative — every category above has at least one
+shipping product. The speculation is about *which* of them becomes the
+default within ~24 months.
 
 ## What we will and will not promise
 

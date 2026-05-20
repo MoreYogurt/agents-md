@@ -21,6 +21,7 @@ The "build artifacts" are Markdown files.
 | Chaptered human docs | [`docs/`](./docs/) |
 | Installable skills (superpower-style) | [`skills/`](./skills/) |
 | Drop-in templates for downstream projects | [`templates/`](./templates/) |
+| Machine-executable spec checks | [`scripts/`](./scripts/) |
 | Future direction | [`docs/outlook.md`](./docs/outlook.md) |
 | 1-page overview | [`docs/overview.md`](./docs/overview.md) |
 

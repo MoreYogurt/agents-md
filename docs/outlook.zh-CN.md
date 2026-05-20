@@ -40,16 +40,27 @@
 
 ## 值得关注的具体信号
 
-- **语义 diff 工具**（AST 感知的 diff、意图 diff）。一旦它们达到行级
-  diff 的可用程度，「一个 PR 一个 feature」就从社会规则升级为结构规则。
-- **AI-Native IDE 基础设施**（Claude Code、Cursor 等）开始把
-  "session" 而不是 "文件" 当作 source of truth。
-- **Scale-to-zero 数据库**（Neon、Turso、PlanetScale）替代常驻
-  Postgres 集群，正在发生。
-- **事件驱动的 Serverless 运行时**替代常驻 Agent 循环：后台作业由消息触发，
-  而不是 while 循环触发。
-- **Policy-as-code 的分支保护**：规则不再是「必须通过这些 check」，
-  而是「必须满足这个意图」——由另一个 Agent 验证。
+- **语义 / AST diff 工具**。基于 tree-sitter 的结构 diff
+  ([Difftastic](https://difftastic.wilfred.me.uk/))、`git diff --word-diff`
+  之类已经存在；下一步是**意图 diff** ——"这个 PR 加了一个 feature flag、
+  没动认证、重构了三个组件"。一旦意图 diff 像行 diff 一样便宜，
+  "一个 PR 一个 feature" 就从社会规则升级为结构规则。
+- **AI-Native IDE 基础设施**。Claude Code、Cursor、Codex、Devin、
+  Windsurf 等正在把 *session* 和 *workflow*（而不是文件）当作 source of
+  truth。本规范依赖的 `AGENTS.md` / `CLAUDE.md` 约定，本身就是这一
+  迁移的早期产物。
+- **Scale-to-zero 数据库**。Neon / Turso / PlanetScale、以及 Supabase
+  的 pooled+direct 拆分，已经是生产级。早期项目默认上常驻 Postgres
+  集群的时代正在结束。
+- **事件驱动的 Serverless 运行时**。Inngest、Trigger.dev、QStash、
+  Cloudflare Queues 等用消息触发的 worker 替代常驻 Agent 循环。
+  经济模型终于和 AI 的突发负载对齐。
+- **Policy-as-code 分支保护**。GitHub Rulesets、OpenSSF Scorecard、
+  以及按仓 GitOps policy engine 暗示了走向：规则不再写成
+  「必须通过这些 check」，而是「必须满足这个意图」—— 由另一个 Agent 验证。
+
+以上没有一个是空想 —— 每一类都至少有一个在产的产品。真正的猜测在于
+**哪一个**会在 ~24 个月内成为默认。
 
 ## 我们的承诺与不承诺
 

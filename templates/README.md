@@ -11,7 +11,8 @@ Drop-in files for downstream projects that want to adopt the
 | [`AGENTS.md`](./AGENTS.md) | Repo root | Entry point OpenAI Codex / Cursor / Devin / Windsurf read automatically. |
 | [`.github/workflows/preview.yml`](./.github/workflows/preview.yml) | `.github/workflows/` | A PR-only, debounced preview workflow that follows the CI/CD section of the spec. |
 | [`.github/PULL_REQUEST_TEMPLATE.md`](./.github/PULL_REQUEST_TEMPLATE.md) | `.github/` | PR description scaffold. |
-| [`claude-settings.json`](./claude-settings.json) | `.claude/settings.json` | Claude Code project settings template. |
+| [`.commitlintrc.json`](./.commitlintrc.json) | Repo root | `@commitlint/cli` config enforcing the agents-md commit rules. |
+| [`claude-settings.json`](./claude-settings.json) | `.claude/settings.json` | Claude Code project settings template (illustrative — verify syntax with your Claude Code version). |
 
 ## Quick install
 

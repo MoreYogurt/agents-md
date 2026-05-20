@@ -38,6 +38,13 @@ available in English and 简体中文.
 | Agent behavior constraints | [`agent-behavior.md`](./agent-behavior.md) | [`agent-behavior.zh-CN.md`](./agent-behavior.zh-CN.md) |
 | Pre-push checklist | [`checklist.md`](./checklist.md) | [`checklist.zh-CN.md`](./checklist.zh-CN.md) |
 
+## Applied
+
+| Topic | English | 中文 |
+| --- | --- | --- |
+| Monorepo specifics | [`monorepo.md`](./monorepo.md) | [`monorepo.zh-CN.md`](./monorepo.zh-CN.md) |
+| Case study | [`case-study.md`](./case-study.md) | [`case-study.zh-CN.md`](./case-study.zh-CN.md) |
+
 ## See also
 
 - [`../STANDARDS.md`](../STANDARDS.md) — Full single-file English spec.

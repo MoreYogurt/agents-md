@@ -1,31 +1,31 @@
 {
-  "_comment": "Template Claude Code project settings aligned with the agents-md standard. Copy to .claude/settings.json in your project root and adjust to taste. The _comment fields are for humans and should be removed.",
+  "_comment_disclaimer": "EXAMPLE ONLY. The exact glob/pattern syntax for Bash permissions in Claude Code may evolve and depends on your Claude Code version. Verify against the current Claude Code docs before relying on these patterns. The shape (permissions.allow / permissions.deny / env) is correct; the contents are illustrative.",
+  "_comment": "Copy this file to .claude/settings.json in your project root and edit to match your stack. Remove the _comment_* fields once you're done.",
 
   "permissions": {
-    "_comment": "Allowed shell commands. Keep this scoped — the agent should never freely run destructive Git or DB commands.",
+    "_comment": "Scope the agent's shell access. Defaults below allow common dev commands and block direct main-branch operations.",
     "allow": [
       "Bash(git status:*)",
       "Bash(git diff:*)",
       "Bash(git log:*)",
       "Bash(git branch:*)",
-      "Bash(git switch:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push -u origin ai/*)",
       "Bash(npm:*)",
       "Bash(pnpm:*)",
       "Bash(yarn:*)"
     ],
     "deny": [
-      "Bash(git push origin main*)",
-      "Bash(git push --force origin main*)",
-      "Bash(git checkout main*)",
-      "Bash(git switch main*)",
-      "Bash(git reset --hard origin/main*)"
+      "Bash(git push origin main:*)",
+      "Bash(git push --force:*)",
+      "Bash(git checkout main:*)",
+      "Bash(git switch main:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(rm -rf:*)"
     ]
   },
 
   "env": {
-    "_comment": "Per-project env overrides for the Claude Code session. Don't put secrets here; put them in .env and load via your app."
+    "_comment": "Per-project env overrides for the Claude Code session. Do NOT put secrets here; put them in .env and load via your app."
   }
 }
