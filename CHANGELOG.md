@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `docs/solo-mode.md` (+ zh-CN) — Solo Mode: the ten rules
+  re-derived for single-person projects (one product owner + AI
+  pair, local-first app, no CI/CD). Keeps the AI-behavior rules
+  verbatim, replaces team-coordination rules with single-player
+  equivalents, and adds a backup rule the main spec gets for free
+  from GitHub.
 - `docs/machine-readable-docs.md` (+ zh-CN) — new §17.5 in
   `STANDARDS.md`. Codifies the emerging pattern where vendors
   publish their docs at predictable `.md` endpoints (e.g. Vercel's

@@ -43,6 +43,7 @@ available in English and 简体中文.
 | Topic | English | 中文 |
 | --- | --- | --- |
 | Monorepo specifics | [`monorepo.md`](./monorepo.md) | [`monorepo.zh-CN.md`](./monorepo.zh-CN.md) |
+| Solo mode (single-person projects) | [`solo-mode.md`](./solo-mode.md) | [`solo-mode.zh-CN.md`](./solo-mode.zh-CN.md) |
 | Case study | [`case-study.md`](./case-study.md) | [`case-study.zh-CN.md`](./case-study.zh-CN.md) |
 
 ## AI-specific concerns
