@@ -10,6 +10,13 @@
 
 ---
 
+> ## 🧭 先选模式（Team / Solo）
+> `agents-md` 分**两种模式**——套用到项目前先判断：
+> - **单人模式 Solo** — 1 个负责人 + AI 搭档，无第三方协作者 → 直接在 `main` 工作，无 PR / 评审 / 分支保护。**👉 [`docs/solo-mode.zh-CN.md`](./docs/solo-mode.zh-CN.md) 覆盖分支 / PR / CI / 评审规则。**
+> - **团队模式 Team（默认）** — 多人协作 → `ai/<feature>` + PR + Squash + 分支保护，读 [`STANDARDS.zh-CN.md`](./STANDARDS.zh-CN.md)。
+
+---
+
 ## 为什么有这个项目
 
 AI Agent 生成代码的速度，远远超出了 Git 被设计时所考虑的人类节奏。

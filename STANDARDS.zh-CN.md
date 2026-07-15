@@ -7,9 +7,15 @@
 >
 > English version: [`STANDARDS.md`](./STANDARDS.md)
 
-> **权威源。** 本文件是规则的唯一 source of truth。`docs/` 下是按章节
-> 展开，`skills/` 下是给 AI Agent 加载的同套规则的另一种编码。
-> 三者出现分歧时，**以本文件为准**，其他文件必须对齐更新。
+> ## 🧭 先选模式（Team / Solo）
+> 本规范分**两种模式**——套用前先判断：
+> - **单人模式 Solo** — 1 个负责人 + AI 搭档，无第三方协作者 → 直接在 `main` 工作，无 PR / 评审 / 分支保护。**👉 [`docs/solo-mode.zh-CN.md`](./docs/solo-mode.zh-CN.md) 覆盖下文的分支 / PR / CI / 评审规则。**
+> - **团队模式 Team（默认）** — 多人协作 → `ai/<feature>` + PR + Squash + 分支保护，继续读本文件。
+
+> **权威源（团队模式）。** 本文件是**团队模式**规则的唯一 source of truth。
+> **单人项目以 [`docs/solo-mode.zh-CN.md`](./docs/solo-mode.zh-CN.md) 为准**（覆盖
+> 分支 / PR / 评审 / CI）。`docs/` 下按章节展开，`skills/` 下是同套规则的另一种
+> 编码；就团队模式而言，三者分歧时以本文件为准，其他文件对齐更新。
 
 ---
 

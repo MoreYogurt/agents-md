@@ -8,10 +8,16 @@
 >
 > 中文版本：[`STANDARDS.zh-CN.md`](./STANDARDS.zh-CN.md)
 
-> **Canonical source.** This file is the single source of truth for
-> the rules. Files under `docs/` expand on individual chapters;
-> packages under `skills/` re-encode the same rules for AI agent
-> consumption. When any of them disagree with this file, **this file
+> ## 🧭 Pick your mode first (Team / Solo)
+> This spec ships in **two modes** — decide before applying it:
+> - **Solo Mode** — one owner + an AI pair, no third-party collaborators → work directly on `main`, no PR / review / branch protection. **👉 [`docs/solo-mode.md`](./docs/solo-mode.md) overrides the branch / PR / CI / review rules below.**
+> - **Team Mode (default)** — multiple human contributors → `ai/<feature>` + PR + squash + branch protection. Continue with this file.
+
+> **Canonical source (Team Mode).** This file is the single source of truth
+> for **Team Mode** rules. **Solo projects: [`docs/solo-mode.md`](./docs/solo-mode.md)
+> overrides this file** on branching, PR, review and CI. Files under `docs/`
+> expand on individual chapters; packages under `skills/` re-encode the same
+> rules. For team mode, when any of them disagree with this file, **this file
 > wins** and the others must be updated.
 
 ---
