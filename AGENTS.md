@@ -10,6 +10,11 @@ should work. There is no app, no build, no test runner.
 If you are an AI agent reading this file, follow these rules while
 editing the repo.
 
+> ## 🧭 Two modes — pick before applying to a project
+> - **Solo Mode** — one owner + an AI pair, no third-party collaborators → work directly on `main`, no PR / review / branch protection. See [`docs/solo-mode.md`](./docs/solo-mode.md).
+> - **Team Mode (default)** — multiple contributors → `ai/<feature>` + PR + squash. See [`STANDARDS.md`](./STANDARDS.md).
+> _(The TL;DR below governs editing **this repo**, which is Team Mode.)_
+
 ---
 
 ## TL;DR — non-negotiable rules

@@ -4,6 +4,11 @@
 > If you are an AI agent reading this file: stop and read it fully before
 > editing anything.
 
+> ## 🧭 Two modes — pick before applying to a project
+> - **Solo Mode** — one owner + an AI pair, no third-party collaborators → work directly on `main`, no PR / review / branch protection. See [`docs/solo-mode.md`](./docs/solo-mode.md).
+> - **Team Mode (default)** — multiple contributors → `ai/<feature>` + PR + squash. See [`STANDARDS.md`](./STANDARDS.md).
+> _(The contribution rules below govern editing **this repo**, which is Team Mode.)_
+
 ## What this repository is
 
 `agents-md` is **a specification**, not an application. It documents how

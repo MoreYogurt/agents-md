@@ -1,0 +1,20 @@
+# agents-md
+
+> AI-native development standards for the vibe-coding era. Ships in **two modes** — pick one before applying it to a project.
+
+## Pick your mode first
+
+- **Solo Mode** — one owner + an AI pair, no third-party collaborators. Work directly on `main`, no PR / review / branch protection. Read [docs/solo-mode.md](docs/solo-mode.md) (中文: [docs/solo-mode.zh-CN.md](docs/solo-mode.zh-CN.md)).
+- **Team Mode (default)** — multiple human contributors. `ai/<feature>` branch + PR + squash merge + branch protection. Read [STANDARDS.md](STANDARDS.md) (中文: [STANDARDS.zh-CN.md](STANDARDS.zh-CN.md)).
+
+## Entry points
+
+- [CLAUDE.md](CLAUDE.md) — Claude Code entry point
+- [AGENTS.md](AGENTS.md) — Codex / OpenAI Agents / Cursor / Devin / Windsurf entry point
+- [README.md](README.md) — human overview (中文: [README.zh-CN.md](README.zh-CN.md))
+
+## Docs
+
+- [docs/](docs/) — per-chapter reference, English + 简体中文 (includes solo-mode.md)
+- [templates/](templates/) — drop-in configs for downstream projects
+- [skills/](skills/) — installable skill packs

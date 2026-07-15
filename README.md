@@ -11,6 +11,13 @@
 
 ---
 
+> ## 🧭 Pick your mode first (Team / Solo)
+> `agents-md` ships in **two modes** — decide before applying it to a project:
+> - **Solo Mode** — one owner + an AI pair, no third-party collaborators → work directly on `main`, no PR / review / branch protection. **👉 [`docs/solo-mode.md`](./docs/solo-mode.md) overrides the branch / PR / CI / review rules.**
+> - **Team Mode (default)** — multiple human contributors → `ai/<feature>` + PR + squash + branch protection. Read [`STANDARDS.md`](./STANDARDS.md).
+
+---
+
 ## Why this exists
 
 AI agents generate code at a speed humans were never designed to commit at.
