@@ -21,7 +21,7 @@ Assumed environment:
 - No CI/CD, no staging, no branch protection. Possibly, at the start,
   no remote at all.
 
-## The ten rules
+## The eleven rules
 
 ### 1. Edit freely, commit deliberately
 
@@ -115,6 +115,46 @@ minimum archive the repo at every milestone. And **never delete a
 file that has not been committed somewhere** — for uncommitted work,
 `rm` is irreversible.
 
+### 11. End a session by writing down what is still in flight
+
+Commits record what is **done**. The progress file's task list records
+what is **not started**. Neither has room for the state in between: a
+conclusion that is only half verified, an approach tried and abandoned
+this afternoon, a result from last week that today's work just
+disproved. That state lives only in the agent's conversation
+transcript — which is per-session, unsearchable in practice, and gone
+the moment you open a new one.
+
+Teams get this handoff for free, through PR descriptions, review
+threads and standups. Solo, you are handing off from yourself to
+yourself, through an agent that will not remember yesterday.
+
+So before ending a session, have the agent append a handoff entry to
+the progress file, in four parts:
+
+- **Done** — finished *and verified*. Anything unverified goes under
+  Next instead; a handoff that blurs those two is worse than none.
+- **Corrected** — conclusions this session overturned. The most
+  valuable of the four: it is what stops the next session from
+  re-walking a path already known to be a dead end. Omit only when
+  nothing was overturned.
+- **Next** — specific enough to act on without rediscovering context.
+- **Refs** — files touched, artefacts never committed, doc sections
+  still out of sync.
+
+Once the project has a remote, an issue thread is the better carrier:
+it survives branch deletion and is readable from another machine. The
+progress file remains the fallback, since rule 10 assumes a remote may
+not exist yet.
+
+Two practicalities. The agent cannot see you close the window, so
+there is no automatic trigger — it has to offer the handoff at natural
+boundaries: a feature landing, a milestone finishing, you saying
+"that's enough for today". And keep the mechanism out of the rule; a
+slash command, a saved prompt, or a template at the foot of the
+progress file all work equally well. What matters is only that the
+state leaves the transcript.
+
 ## What changed from the main spec, and why
 
 | Main spec | Solo Mode | Why |
@@ -125,6 +165,7 @@ file that has not been committed somewhere** — for uncommitted work,
 | Event-driven, not polling | Folded into rule 9 | Solo, its essence is "don't burn tokens idling" |
 | Search before generating; bounded retries | Kept verbatim (rules 8–9) | AI-behavior rules are team-size independent |
 | — | New rule 10 (backup) | The main spec gets backups for free from GitHub; solo projects often start with no remote at all |
+| — | New rule 11 (session handoff) | Teams hand off through PR descriptions, review threads and standups; solo, consecutive agent sessions share no memory at all |
 
 ## When to graduate back
 
@@ -133,3 +174,8 @@ contributor appears — or a CI pipeline, or a staging environment —
 switch the affected rules back to the main spec. The transitions are
 mechanical: rule 2 becomes branching, rule 3 becomes PRs, rule 4
 becomes CI, rule 5 becomes deploy-from-`main`.
+
+Rule 11 is the exception. Its carrier upgrades — the handoff moves
+from the progress file into PR descriptions and issue threads — but
+the rule itself never graduates. Adding a teammate does not give your
+agent a memory of last Tuesday.
