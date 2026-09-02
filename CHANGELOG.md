@@ -11,12 +11,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `docs/solo-mode.md` (+ zh-CN) — Solo Mode: the ten rules
+- `docs/solo-mode.md` (+ zh-CN) — Solo Mode: the main spec
   re-derived for single-person projects (one product owner + AI
   pair, local-first app, no CI/CD). Keeps the AI-behavior rules
   verbatim, replaces team-coordination rules with single-player
   equivalents, and adds a backup rule the main spec gets for free
   from GitHub.
+- `docs/solo-mode.md` (+ zh-CN) rule 11 — session handoff. Commits
+  record what is done and the progress file records what is not
+  started; the state in between (half-verified conclusions,
+  approaches abandoned mid-session, last week's result that today
+  disproved) had nowhere to live except the agent's transcript,
+  which is per-session and effectively unsearchable. Teams get this
+  handoff free from PR descriptions and standups — solo projects
+  get nothing, so the rule makes it explicit: four parts (Done /
+  Corrected / Next / Refs), written to the progress file, upgraded
+  to an issue thread once a remote exists. Unlike rules 2–5 it does
+  not graduate back to the main spec.
 - `docs/machine-readable-docs.md` (+ zh-CN) — new §17.5 in
   `STANDARDS.md`. Codifies the emerging pattern where vendors
   publish their docs at predictable `.md` endpoints (e.g. Vercel's
